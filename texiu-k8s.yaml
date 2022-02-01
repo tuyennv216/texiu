@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: texiu-deployment
+  labels:
+    app: texiu
+spec:
+  selector:
+    matchLabels:
+      app: texiu
+  template:
+    metadata:
+      labels:
+        app: texiu
+    spec:
+      containers:
+      - name: texiu-api
+        image: docker.io/library/texiu:1.0.0
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 80
