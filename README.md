@@ -6,15 +6,15 @@
 
 ### - Save image to a local file  
 
-`docker save hello-web > texiu.tar`
+`docker save texiu > texiu.tar`
 
 ### - Import image to k8s  
 
-`microk8s.ctr image import texiu.tar`
+`microk8s ctr image import texiu.tar`
 
 ### - List images  
 
-`microk8s.ctr images ls "name~=texiu"`
+`microk8s ctr images ls "name~=texiu"`
 
 ### - Apply deployment  
 
@@ -28,7 +28,7 @@
 
 ### - Push  
 
-`docker push localhost:32000/texiu`
+`docker push localhost:32000/texiu:1.0.0`
 
 ## Deploy the image  
 

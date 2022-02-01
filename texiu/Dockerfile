@@ -19,4 +19,4 @@ RUN dotnet publish "texiu.csproj" -c Release -o /app/publish
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "texiu.dll"]
+ENTRYPOINT ["dotnet", "texiu.dll", "--server.urls", "http://+:80;https://+:443"]
