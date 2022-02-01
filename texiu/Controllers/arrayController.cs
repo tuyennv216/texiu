@@ -14,6 +14,8 @@ public class arrayController : ControllerBase
 	{
 		_logger = logger;
 		_arrayService = arrayService;
+
+		_logger.LogInformation("Load array controller successful!");
 	}
 
 	[HttpPost]

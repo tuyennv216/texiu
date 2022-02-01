@@ -14,6 +14,8 @@ public class randomController : ControllerBase
 	{
 		_logger = logger;
 		_randomService = randomService;
+
+		_logger.LogInformation("Load random controller successful!");
 	}
 
 	[HttpGet]

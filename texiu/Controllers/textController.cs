@@ -14,6 +14,8 @@ public class textController : ControllerBase
 	{
 		_logger = logger;
 		_textService = textService;
+
+		_logger.LogInformation("Load text controller successful!");
 	}
 
 	[HttpGet]
