@@ -14,21 +14,19 @@ public class textController : ControllerBase
 	{
 		_logger = logger;
 		_textService = textService;
-
-		_logger.LogInformation("Load text controller successful!");
 	}
 
 	[HttpGet]
-	public ActionResult missingChar(string text, float percent, char replaceChar = '_')
+	public ActionResult missingChar(string text, float percent)
 	{
-		var output = _textService.MissingChar(text, percent, replaceChar);
+		var output = _textService.MissingChar(text, percent);
 		return Ok(output);
 	}
 
 	[HttpGet]
-	public ActionResult missingWord(string text, float percent, char replaceChar = '_')
+	public ActionResult missingWord(string text, float percent)
 	{
-		var output = _textService.MissingWord(text, percent, replaceChar);
+		var output = _textService.MissingWord(text, percent);
 		return Ok(output);
 	}
 }

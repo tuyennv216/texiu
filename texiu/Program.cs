@@ -3,6 +3,12 @@ using texiu.Service;
 
 var builder = WebApplication.CreateBuilder(args);
 
+// Add custom configuraion for IConfiguration
+builder.Host.ConfigureAppConfiguration((hostingContext, config) =>
+{
+	config.AddJsonFile("customsettings.json", optional: true, reloadOnChange: true);
+});
+
 // Add services to the container.
 builder.Services.AddScoped<IArrayService, ArrayService>();
 builder.Services.AddScoped<IRandomService, RandomService>();
