@@ -10,9 +10,10 @@ builder.Host.ConfigureAppConfiguration((hostingContext, config) =>
 });
 
 // Add services to the container.
-builder.Services.AddScoped<IArrayService, ArrayService>();
-builder.Services.AddScoped<IRandomService, RandomService>();
-builder.Services.AddScoped<ITextService, TextService>();
+builder.Services.AddSingleton<IDataService, DataService>();
+builder.Services.AddSingleton<IArrayService, ArrayService>();
+builder.Services.AddSingleton<IRandomService, RandomService>();
+builder.Services.AddSingleton<ITextService, TextService>();
 builder.Services.AddMemoryCache();
 
 builder.Services.AddControllers();

@@ -1,0 +1,94 @@
+﻿[
+  {
+    "names": "Nguyễn",
+    "chance": "38.4"
+  },
+  {
+    "names": "Trần",
+    "chance": "12.1"
+  },
+  {
+    "names": "Lê",
+    "chance": "10.3"
+  },
+  {
+    "names": "Phạm",
+    "chance": "6.7"
+  },
+  {
+    "names": "Phan",
+    "chance": "5.1"
+  },
+  {
+    "names": "Vũ,Võ",
+    "chance": "4.5"
+  },
+  {
+    "names": "Hoàng,Huỳnh",
+    "chance": "4"
+  },
+  {
+    "names": "Đặng",
+    "chance": "2.1"
+  },
+  {
+    "names": "Bùi",
+    "chance": "2"
+  },
+  {
+    "names": "Đỗ",
+    "chance": "1.4"
+  },
+  {
+    "names": "Hồ",
+    "chance": "1.3"
+  },
+  {
+    "names": "Ngô",
+    "chance": "1.3"
+  },
+  {
+    "names": "Dương",
+    "chance": "1"
+  },
+  {
+    "names": "Lý",
+    "chance": "0.5"
+  },
+  {
+    "names": "An,Anh,Ao,Ánh,Ân,Âu,Âu Dương,Ấu,Bá,Bạc,Bạch,Bàn,Bàng,Bành,Bảo,Bế,Bì,Biện,Bình,Bồ,Chriêng,Ca,Cà,Cái,Cai,Cam,Cảnh,Cao,Cáp,Cát",
+    "chance": "1"
+  },
+  {
+    "names": "Cầm,Cấn,Chế,Chiêm,Chu/Châu,Chung,Chúng,Chương,Chử,Cồ,Cổ,Công,Cống,Cung,Cù,Cự,Dã,Danh,Diêm,Diệp,Doãn,Du,Duy,Dư,Đan,Đàm,Đào,Đăng,Đắc,Đầu",
+    "chance": "1"
+  },
+  {
+    "names": "Đậu,Đèo,Điêu,Điền,Điều,Đinh,Đình,Đoàn,Đoạn,Đôn,Đống,Đồ,Đồng,Đổng,Đới,Đái,Đương,Đường,Đức,Giả,Giao,Giang,Giàng,Giản,Giảng,Giáp,Hưng,H',H'ma,H'nia",
+    "chance": "1"
+  },
+  {
+    "names": "Hầu,Hà,Hạ,Hàn,Hàng,Hán,Hề,Hi,Hình,Hoa,Hoà,Hoàng Phủ,Hồng,Hùng,Hứa,Hướng,Kinh,Kông,Kiểu,Kha,Khà,Khai,Khâu,Khiếu,Khoa,Khổng,Khu,Khuất,Khúc,Khương",
+    "chance": "1"
+  },
+  {
+    "names": "Khưu,Kiều,Kim,Lyly,La,Lã/Lữ,Lãnh,Lạc,Lại,Lăng,Lâm,Lèng,Lều,Liên,Liêu,Liễu,Linh,Lò,Lô,Lỗ,Lộ,Lộc,Luyện,Lục,Lư,Lương,Lường,Lưu,Mùa,Ma",
+    "chance": "1"
+  },
+  {
+    "names": "Mai,Mang,Mã,Mạc,Mạch,Mạnh,Mâu,Mầu,Mẫn,Mộc,Mục,Miêu,Ngạc,Ngân,Nghiêm,Nghị,Ngọ,Ngọc,Ngôn,Nguyên,Ngũ,Ngụy,Nhan,Nhâm,Nhữ,Ninh,Nông,Ong,Ông,Phi",
+    "chance": "1"
+  },
+  {
+    "names": "Phí,Phó,Phong,Phù,Phú,Phùng,Phương,Quản,Quán,Quang,Quàng,Quảng,Quách,Quế,Quyền,Sái,Sầm,Sơn,Sử,Sùng,Tán,Tào,Tạ,Tăng,Tấn,Tất,Tề,Thang,Thái,Thành",
+    "chance": "1"
+  },
+  {
+    "names": "Thào,Thạch,Thân,Thẩm,Thập,Thế,Thi,Thiều,Thiệu,Thịnh,Thiềm,Thoa,Thôi,Thóng,Thục,Tiêu,Tiết,Tiếp,Tinh,Tòng,Tô,Tôn,Tôn Nữ,Tôn Thất,Tông,Tống,Trang,Tráng,Trác,Trà",
+    "chance": "1"
+  },
+  {
+    "names": "Tri,Triệu,Trình,Trịnh,Trung,Trưng,Trương,Tuấn,Từ,Tưởng,Ty,Uông,Ung,Ưng,Ứng,Việt,Vàng,Vạn,Văn,Vi,Viêm,Viên,Vòng,Vương,Vưu,Xa,Xung,Yên",
+    "chance": "1"
+  }
+]

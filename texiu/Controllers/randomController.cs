@@ -17,16 +17,72 @@ public class randomController : ControllerBase
 	}
 
 	[HttpGet]
-	public ActionResult randomFlag(int length)
+	public ActionResult splitNumber(int number, int upper)
+	{
+		var output = _randomService.RandomSplitNumber(number, upper);
+		return Ok(output);
+	}
+
+	[HttpGet]
+	public ActionResult flag(int length)
 	{
 		var output = _randomService.RandomFlagInt(length);
 		return Ok(output);
 	}
 
 	[HttpGet]
-	public ActionResult randomFlagOne(int length, int bitOneLength)
+	public ActionResult flagOne(int length, int bitOneLength)
 	{
 		var output = _randomService.RandomFlagInt(length, bitOneLength);
+		return Ok(output);
+	}
+
+	[HttpGet]
+	public ActionResult name(int quantity)
+	{
+		var output = _randomService.RandomName(quantity);
+		return Ok(output);
+	}
+
+	[HttpGet]
+	public ActionResult username(int length, int quantity)
+	{
+		var output = _randomService.RandomUsername(length, quantity);
+		return Ok(output);
+	}
+
+	[HttpGet]
+	public ActionResult password(int length, int quantity)
+	{
+		var output = _randomService.RandomPassword(length, quantity);
+		return Ok(output);
+	}
+
+	[HttpGet]
+	public ActionResult address(int quantity)
+	{
+		var output = _randomService.RandomAddress(quantity);
+		return Ok(output);
+	}
+
+	[HttpGet]
+	public ActionResult zipcode(int quantity)
+	{
+		var output = _randomService.RandomZipcode(quantity);
+		return Ok(output);
+	}
+
+	[HttpGet]
+	public ActionResult age(int lower, int upper, int quantity)
+	{
+		var output = _randomService.RandomAge(lower, upper, quantity);
+		return Ok(output);
+	}
+
+	[HttpGet]
+	public ActionResult indexByRatio(int length, string ratio)
+	{
+		var output = _randomService.RandomIndexByRatio(length, ratio);
 		return Ok(output);
 	}
 
