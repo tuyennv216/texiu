@@ -38,8 +38,10 @@
 
 `microk8s.kubectl expose deployment texiu-deployment --type=NodePort --name=texiu-nodeport`
 
-
-### Get the port  
+### Get the service port  
 
 `microk8s kubectl get services`
 
+## Attach to image  
+
+`microk8s kubectl exec --stdin --tty pod_name texiu-deployment-79fdf465fd-52xcj -- /bin/bash`

@@ -19,3 +19,19 @@ spec:
         imagePullPolicy: Never
         ports:
         - containerPort: 80
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: texiu-loadbalancer
+spec:
+  selector:
+    app: texiu
+  ports:
+    - name: http
+      nodePort: 31101   # access from vps_public_ip:31101
+      port: 4001        # access internal from cluster-ip
+      targetPort: 80    # port of the web-api
+  externalIPs:
+  - 0.0.0.0 # the VPS public IP address
+  type: LoadBalancer
