@@ -23,10 +23,6 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
-// Configure the cert and the key
-builder.Configuration["Kestrel:Certificates:Default:Path"] = "cert.pem";
-builder.Configuration["Kestrel:Certificates:Default:KeyPath"] = "key.pem";
-
 // Build app
 var app = builder.Build();
 
