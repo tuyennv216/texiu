@@ -90,14 +90,14 @@ public class randomController : ControllerBase
 		return Ok(output);
 	}
 
-	[HttpGet("random-account")]
+	[HttpGet("account")]
 	public ActionResult GetAccounts(int quantity)
 	{
 		var output = _mapper.Map<IEnumerable<Account>>(_randomService.RandomAccounts(quantity));
 		return Ok(output);
 	}
 
-	[HttpGet("random-people")]
+	[HttpGet("people")]
 	public ActionResult GetPeople(int quantity, int fromAge, int toAge)
 	{
 		var output = _mapper.Map<IEnumerable<Person>>(_randomService.RandomPeople(quantity, fromAge, toAge));

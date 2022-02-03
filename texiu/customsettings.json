@@ -1,4 +1,5 @@
 ﻿{
+	"wellcome": "Xin chào! server đang hoạt động.",
 	"custom": {
 		"text": {
 			"replaceChar": "_"

@@ -1,3 +1,4 @@
+using System.Security.Cryptography.X509Certificates;
 using texiu.Interface;
 using texiu.Service;
 
@@ -22,6 +23,10 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
+// Configure the cert and the key
+builder.Configuration["Kestrel:Certificates:Default:Path"] = "cert.pem";
+builder.Configuration["Kestrel:Certificates:Default:KeyPath"] = "key.pem";
+
 // Build app
 var app = builder.Build();
 
@@ -37,5 +42,8 @@ if (app.Environment.IsDevelopment())
 //app.UseAuthorization();
 
 app.MapControllers();
+
+var wellcome = app.Configuration["wellcome"] ?? "Hello! Server is running.";
+app.MapGet("/", () => wellcome);
 
 app.Run();
