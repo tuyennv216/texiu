@@ -1,9 +1,4 @@
-
----
 ## Build an image
-
----
-
 #### - Build image  
 `docker build -t texiu:1.0.0 --force-rm -f texiu/Dockerfile .`
 
@@ -16,10 +11,7 @@
 #### - List images  
 `microk8s ctr images ls "name~=texiu"`
 
----
 ## Deploy on server
-
----
 #### - Edit the external ip with the vps public ip in the deployment file 'texiu-k8s.yaml'
 ```
   externalIPs:
@@ -27,11 +19,7 @@
 ```
 
 #### - Apply deployment  
-
 `microk8s.kubectl apply -f texiu-k8s.yaml`
 
----
-### Check if the apis are working
+#### - Check if the apis are working
 `curl VPS_public_ip:31101/random/flag?length=10`
-
----
