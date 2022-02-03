@@ -1,4 +1,6 @@
-﻿namespace texiu.Interface;
+﻿using texiu.Model;
+
+namespace texiu.Interface;
 
 public interface IRandomService
 {
@@ -17,4 +19,7 @@ public interface IRandomService
 	public int[] RandomZipcode(int quantity);
 	public int[] RandomAge(int lower, int upper, int quantity);
 	public int[] RandomIndexByRatio(int length, string ratio);
+
+	public Account[] RandomAccounts(int quantity);
+	public Person[] RandomPeople(int quantity, int fromAge = 1, int toAge = 99);
 }

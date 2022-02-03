@@ -1,16 +1,19 @@
 ﻿using System.Collections;
 using System.Security.Cryptography;
 using texiu.Interface;
+using texiu.Model;
 
 namespace texiu.Service;
 
 public class RandomService : IRandomService
 {
+	private readonly IConfiguration _configuration;
 	private readonly IArrayService _arrayService;
 	private readonly IDataService _dataService;
 
-	public RandomService(IArrayService arrayService, IDataService dataService)
+	public RandomService(IConfiguration configuration, IArrayService arrayService, IDataService dataService)
 	{
+		_configuration = configuration;
 		_arrayService = arrayService;
 		_dataService = dataService;
 	}
@@ -273,4 +276,47 @@ public class RandomService : IRandomService
 
 		return output;
 	}
+
+	public Account[] RandomAccounts(int quantity)
+	{
+		var username_len = _configuration.GetValue("custom:random:account:username_len", 8);
+		var password_len = _configuration.GetValue("custom:random:account:password_len", 12);
+		var usernames = RandomUsername(username_len, quantity);
+		var passwords = RandomPassword(password_len, quantity);
+
+		var output = new Account[quantity];
+		for (int i = 0; i < quantity; ++i)
+		{
+			output[i] = new Account()
+			{
+				Username = usernames[i],
+				Password = passwords[i],
+			};
+		}
+
+		return output;
+	}
+
+	public Person[] RandomPeople(int quantity, int fromAge = 1, int toAge = 99)
+	{
+		var names = RandomName(quantity);
+		var ages = RandomAge(fromAge, toAge, quantity);
+		var addresses = RandomAddress(quantity);
+		var zipcodes = RandomZipcode(quantity);
+
+		var output = new Person[quantity];
+		for (var i = 0; i < quantity; ++i)
+		{
+			output[i] = new Person()
+			{
+				Name = names[i],
+				Age = ages[i],
+				Address = addresses[i],
+				Zipcode = zipcodes[i],
+			};
+		}
+
+		return output;
+	}
+
 }

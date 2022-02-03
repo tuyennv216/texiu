@@ -4,7 +4,7 @@ using texiu.Interface;
 namespace texiu.Controllers;
 
 [ApiController]
-[Route("[controller]/[action]")]
+[Route("[controller]")]
 public class textController : ControllerBase
 {
 	private readonly ILogger<textController> _logger;
@@ -16,15 +16,15 @@ public class textController : ControllerBase
 		_textService = textService;
 	}
 
-	[HttpGet]
-	public ActionResult missingChar(string text, float percent)
+	[HttpGet("missing-char")]
+	public ActionResult MissingChar(string text, float percent)
 	{
 		var output = _textService.MissingChar(text, percent);
 		return Ok(output);
 	}
 
-	[HttpGet]
-	public ActionResult missingWord(string text, float percent)
+	[HttpGet("missing-word")]
+	public ActionResult MissingWord(string text, float percent)
 	{
 		var output = _textService.MissingWord(text, percent);
 		return Ok(output);

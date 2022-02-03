@@ -1,7 +1,13 @@
 ﻿{
-  "custom": {
-    "text": {
-      "replaceChar": "_"
-    }
-  }
+	"custom": {
+		"text": {
+			"replaceChar": "_"
+		},
+		"random": {
+			"account": {
+				"username_len": 8,
+				"passowrd_len": 12
+			}
+		}
+	}
 }

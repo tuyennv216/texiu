@@ -41,7 +41,7 @@ public class ArrayService : IArrayService
 		var segments = chances.Select(x => x * length / total).ToArray();
 		var segmentsTotal = segments.Sum();
 		if (segments.Length > 0 && segmentsTotal != length)
-			segments[segments.Length - 1] = length - segmentsTotal;
+			segments[segments.Length - 1] += length - segmentsTotal;
 		return segments;
 	}
 	#endregion

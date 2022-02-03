@@ -4,7 +4,7 @@ using texiu.Interface;
 namespace texiu.Controllers;
 
 [ApiController]
-[Route("[controller]/[action]")]
+[Route("[controller]")]
 public class arrayController : ControllerBase
 {
 	private readonly ILogger<arrayController> _logger;
@@ -16,50 +16,50 @@ public class arrayController : ControllerBase
 		_arrayService = arrayService;
 	}
 
-	[HttpPost]
-	public ActionResult indexRatio(int length, string ratio)
+	[HttpGet("index-ratio")]
+	public ActionResult IndexRatio(int length, string ratio)
 	{
 		var output = _arrayService.IndexesByRatio(length, ratio);
 		return Ok(output);
 	}
 
-	[HttpPost]
-	public ActionResult segmentRatio(int length, string ratio)
+	[HttpGet("segment-ratio")]
+	public ActionResult SegmentRatio(int length, string ratio)
 	{
 		var output = _arrayService.SegmentsByRatio(length, ratio);
 		return Ok(output);
 	}
 
-	[HttpPost]
-	public ActionResult incrementAdd(int[] array)
+	[HttpPost("increment-add")]
+	public ActionResult IncrementAdd(int[] array)
 	{
 		var output = _arrayService.MakeIncrementAdd(array);
 		return Ok(output);
 	}
 
-	[HttpGet]
-	public ActionResult findLeftIndex(int[] array, int value)
+	[HttpPost("find-left-index")]
+	public ActionResult FindLeftIndex(int[] array, int value)
 	{
 		var output = _arrayService.FindLeftIndex(array, value);
 		return Ok(output);
 	}
 
-	[HttpGet]
-	public ActionResult findRightIndex(int[] array, int value)
+	[HttpPost("find-right-index")]
+	public ActionResult FindRightIndex(int[] array, int value)
 	{
 		var output = _arrayService.FindRightIndex(array, value);
 		return Ok(output);
 	}
 
-	[HttpPost]
-	public ActionResult shuffle(object[] array)
+	[HttpPost("shuffle")]
+	public ActionResult Shuffle(object[] array)
 	{
 		var output = _arrayService.Shuffle(array);
 		return Ok(output);
 	}
 
-	[HttpPost]
-	public ActionResult shuffleIndex(object[] array)
+	[HttpPost("shuffle-index")]
+	public ActionResult ShuffleIndex(object[] array)
 	{
 		var output = _arrayService.ShuffleIndex(array);
 		return Ok(output);
