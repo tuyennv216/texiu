@@ -1,254 +1,317 @@
 ﻿[
   {
-    "postcode": "90000,90000",
-    "province": "An Giang"
+    "province": "Thừa Thiên Huế",
+    "postcode": "49000:49000",
+    "chance": "13.02976"
   },
   {
-    "postcode": "78000,78000",
-    "province": "Bà Rịa Vũng Tàu"
+    "province": "Kiên Giang",
+    "postcode": "91000:92000",
+    "chance": "16.85452"
   },
   {
-    "postcode": "97000,97000",
-    "province": "Bạc Liêu"
+    "province": "Hải Phòng",
+    "postcode": "04000:05000",
+    "chance": "16.99204"
   },
   {
-    "postcode": "23000,23000",
-    "province": "Bắc Kạn"
+    "province": "Gia Lai",
+    "postcode": "61000:62000",
+    "chance": "15.13847"
   },
   {
-    "postcode": "26000,26000",
-    "province": "Bắc Giang"
+    "province": "Bình Định",
+    "postcode": "55000:55000",
+    "chance": "12.41047"
   },
   {
-    "postcode": "16000,16000",
-    "province": "Bắc Ninh"
+    "province": "An Giang",
+    "postcode": "90000:90000",
+    "chance": "19.08352"
   },
   {
-    "postcode": "86000,86000",
-    "province": "Bến Tre"
+    "province": "Hưng Yên",
+    "postcode": "17000:17000",
+    "chance": "12.98652"
   },
   {
-    "postcode": "75000,75000",
-    "province": "Bình Dương"
+    "province": "Nghệ An",
+    "postcode": "43000:44000",
+    "chance": "30.90974"
   },
   {
-    "postcode": "55000,55000",
-    "province": "Bình Định"
+    "province": "Bắc Kạn",
+    "postcode": "23000:23000",
+    "chance": "3.13905"
   },
   {
-    "postcode": "67000,67000",
-    "province": "Bình Phước"
+    "province": "Quảng Ninh",
+    "postcode": "01000:02000",
+    "chance": "11.20806"
   },
   {
-    "postcode": "77000,77000",
-    "province": "Bình Thuận"
+    "province": "Hà Nội",
+    "postcode": "10000:14000",
+    "chance": "78.02466"
   },
   {
-    "postcode": "98000,98000",
-    "province": "Cà Mau"
+    "province": "Quảng Bình",
+    "postcode": "47000:47000",
+    "chance": "7.50485"
   },
   {
-    "postcode": "21000,21000",
-    "province": "Cao Bằng"
+    "province": "Bà Rịa Vũng Tàu",
+    "postcode": "78000:78000",
+    "chance": "10.82136"
   },
   {
-    "postcode": "94000,94000",
-    "province": "Cần Thơ"
+    "province": "Thanh Hóa",
+    "postcode": "40000:42000",
+    "chance": "31.63534"
   },
   {
-    "postcode": "50000,50000",
-    "province": "Đà Nẵng"
+    "province": "Quảng Ngãi",
+    "postcode": "53000:54000",
+    "chance": "10.29034"
   },
   {
-    "postcode": "32000,32000",
-    "province": "Điện Biên"
+    "province": "Bến Tre",
+    "postcode": "86000:86000",
+    "chance": "11.86574"
   },
   {
-    "postcode": "63000,64000",
-    "province": "Đắk Lắk"
+    "province": "Ninh Thuận",
+    "postcode": "59000:59000",
+    "chance": "5.90467"
   },
   {
-    "postcode": "65000,65000",
-    "province": "Đắk Nông"
+    "province": "Bình Thuận",
+    "postcode": "77000:77000",
+    "chance": "10.87456"
   },
   {
-    "postcode": "76000,76000",
-    "province": "Đồng Nai"
+    "province": "Bắc Giang",
+    "postcode": "26000:26000",
+    "chance": "11.73509"
   },
   {
-    "postcode": "81000,81000",
-    "province": "Đồng Tháp"
+    "province": "Lào Cai",
+    "postcode": "31000:31000",
+    "chance": "6.97678"
   },
   {
-    "postcode": "61000,62000",
-    "province": "Gia Lai"
+    "province": "Bạc Liêu",
+    "postcode": "97000:97000",
+    "chance": "7.66737"
   },
   {
-    "postcode": "20000,20000",
-    "province": "Hà Giang"
+    "province": "Hà Giang",
+    "postcode": "20000:20000",
+    "chance": "6.74166"
   },
   {
-    "postcode": "18000,18000",
-    "province": "Hà Nam"
+    "province": "Bắc Ninh",
+    "postcode": "16000:16000",
+    "chance": "10.51257"
   },
   {
-    "postcode": "10000,14000",
-    "province": "Hà Nội"
+    "province": "Lạng Sơn",
+    "postcode": "25000:25000",
+    "chance": "7.05389"
   },
   {
-    "postcode": "45000,46000",
-    "province": "Hà Tĩnh"
+    "province": "Bình Dương",
+    "postcode": "75000:75000",
+    "chance": "22.08572"
   },
   {
-    "postcode": "03000,03000",
-    "province": "Hải Dương"
+    "province": "Quảng Nam",
+    "postcode": "51000:52000",
+    "chance": "14.95812"
   },
   {
-    "postcode": "04000,05000",
-    "province": "Hải Phòng"
+    "province": "Sơn La",
+    "postcode": "34000:34000",
+    "chance": "11.45401"
   },
   {
-    "postcode": "95000,95000",
-    "province": "Hậu Giang"
+    "province": "Cao Bằng",
+    "postcode": "21000:21000",
+    "chance": "4.61364"
   },
   {
-    "postcode": "36000,36000",
-    "province": "Hòa Bình"
+    "province": "Lâm Đồng",
+    "postcode": "66000:66000",
+    "chance": "11.90625"
   },
   {
-    "postcode": "70000,74000",
-    "province": "TP Hồ Chí Minh"
+    "province": "Tây Ninh",
+    "postcode": "80000:80000",
+    "chance": "10.70797"
   },
   {
-    "postcode": "17000,17000",
-    "province": "Hưng Yên"
+    "province": "Long An",
+    "postcode": "82000:83000",
+    "chance": "13.94445"
   },
   {
-    "postcode": "57000,57000",
-    "province": "Khánh Hòa"
+    "province": "Đồng Nai",
+    "postcode": "76000:76000",
+    "chance": "29.79144"
   },
   {
-    "postcode": "91000,92000",
-    "province": "Kiên Giang"
+    "province": "TP Hồ Chí Minh",
+    "postcode": "70000:74000",
+    "chance": "88.3691"
   },
   {
-    "postcode": "60000,60000",
-    "province": "Kon Tum"
+    "province": "Hải Dương",
+    "postcode": "03000:03000",
+    "chance": "18.95245"
   },
   {
-    "postcode": "30000,30000",
-    "province": "Lai Châu"
+    "province": "Bình Phước",
+    "postcode": "67000:67000",
+    "chance": "9.53831"
   },
   {
-    "postcode": "25000,25000",
-    "province": "Lạng Sơn"
+    "province": "Hà Nam",
+    "postcode": "18000:18000",
+    "chance": "8.69666"
   },
   {
-    "postcode": "31000,31000",
-    "province": "Lào Cai"
+    "province": "Vĩnh Long",
+    "postcode": "85000:85000",
+    "chance": "7.6234"
   },
   {
-    "postcode": "66000,66000",
-    "province": "Lâm Đồng"
+    "province": "Cần Thơ",
+    "postcode": "94000:94000",
+    "chance": "10.95347"
   },
   {
-    "postcode": "82000,83000",
-    "province": "Long An"
+    "province": "Vĩnh Phúc",
+    "postcode": "15000:15000",
+    "chance": "10.28619"
   },
   {
-    "postcode": "07000,07000",
-    "province": "Nam Định"
+    "province": "Đắk Lắk",
+    "postcode": "63000:64000",
+    "chance": "12.78094"
   },
   {
-    "postcode": "43000,44000",
-    "province": "Nghệ An"
+    "province": "Cà Mau",
+    "postcode": "98000:98000",
+    "chance": "11.94476"
   },
   {
-    "postcode": "08000,08000",
-    "province": "Ninh Bình"
+    "province": "Tiền Giang",
+    "postcode": "84000:84000",
+    "chance": "16.39031"
   },
   {
-    "postcode": "59000,59000",
-    "province": "Ninh Thuận"
+    "province": "Phú Thọ",
+    "postcode": "35000:35000",
+    "chance": "13.59803"
   },
   {
-    "postcode": "35000,35000",
-    "province": "Phú Thọ"
+    "province": "Khánh Hòa",
+    "postcode": "57000:57000",
+    "chance": "11.95305"
   },
   {
-    "postcode": "56000,56000",
-    "province": "Phú Yên"
+    "province": "Đà Nẵng",
+    "postcode": "50000:50000",
+    "chance": "11.3431"
   },
   {
-    "postcode": "47000,47000",
-    "province": "Quảng Bình"
+    "province": "Quảng Trị",
+    "postcode": "48000:48000",
+    "chance": "6.32375"
   },
   {
-    "postcode": "51000,52000",
-    "province": "Quảng Nam"
+    "province": "Hà Tĩnh",
+    "postcode": "45000:46000",
+    "chance": "11.96922"
   },
   {
-    "postcode": "53000,54000",
-    "province": "Quảng Ngãi"
+    "province": "Trà Vinh",
+    "postcode": "87000:87000",
+    "chance": "8.36143"
   },
   {
-    "postcode": "01000,02000",
-    "province": "Quảng Ninh"
+    "province": "Đồng Tháp",
+    "postcode": "81000:81000",
+    "chance": "14.75836"
   },
   {
-    "postcode": "48000,48000",
-    "province": "Quảng Trị"
+    "province": "Hòa Bình",
+    "postcode": "36000:36000",
+    "chance": "7.63132"
   },
   {
-    "postcode": "96000,96000",
-    "province": "Sóc Trăng"
+    "province": "Hậu Giang",
+    "postcode": "95000:95000",
+    "chance": "7.78027"
   },
   {
-    "postcode": "34000,34000",
-    "province": "Sơn La"
+    "province": "Sóc Trăng",
+    "postcode": "96000:96000",
+    "chance": "10.51441"
   },
   {
-    "postcode": "80000,80000",
-    "province": "Tây Ninh"
+    "province": "Tuyên Quang",
+    "postcode": "22000:22000",
+    "chance": "6.88446"
   },
   {
-    "postcode": "06000,06000",
-    "province": "Thái Bình"
+    "province": "Đắk Nông",
+    "postcode": "65000:65000",
+    "chance": "6.45857"
   },
   {
-    "postcode": "24000,24000",
-    "province": "Thái Nguyên"
+    "province": "Thái Nguyên",
+    "postcode": "24000:24000",
+    "chance": "12.25479"
   },
   {
-    "postcode": "40000,42000",
-    "province": "Thanh Hoá"
+    "province": "Kon Tum",
+    "postcode": "60000:60000",
+    "chance": "5.31249"
   },
   {
-    "postcode": "49000,49000",
-    "province": "Thừa Thiên Huế"
+    "province": "Điện Biên",
+    "postcode": "32000:32000",
+    "chance": "4.82771"
   },
   {
-    "postcode": "84000,84000",
-    "province": "Tiền Giang"
+    "province": "Phú Yên",
+    "postcode": "56000:56000",
+    "chance": "8.28384"
   },
   {
-    "postcode": "87000,87000",
-    "province": "Trà Vinh"
+    "province": "Thái Bình",
+    "postcode": "06000:06000",
+    "chance": "16.43601"
   },
   {
-    "postcode": "22000,22000",
-    "province": "Tuyên Quang"
+    "province": "Ninh Bình",
+    "postcode": "08000:08000",
+    "chance": "7.32008"
   },
   {
-    "postcode": "85000,85000",
-    "province": "Vĩnh Long"
+    "province": "Nam Định",
+    "postcode": "07000:07000",
+    "chance": "16.45861"
   },
   {
-    "postcode": "15000,15000",
-    "province": "Vĩnh Phúc"
+    "province": "Lai Châu",
+    "postcode": "30000:30000",
+    "chance": "3.96994"
   },
   {
-    "postcode": "33000,33000",
-    "province": "Yên Bái"
+    "province": "Yên Bái",
+    "postcode": "33000:33000",
+    "chance": "8.18781"
   }
 ]

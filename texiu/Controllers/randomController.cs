@@ -80,7 +80,7 @@ public class randomController : ControllerBase
 	}
 
 	[HttpGet]
-	public ActionResult indexByRatio(int length, string ratio)
+	public ActionResult indexRatio(int length, string ratio)
 	{
 		var output = _randomService.RandomIndexByRatio(length, ratio);
 		return Ok(output);

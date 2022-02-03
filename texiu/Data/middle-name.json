@@ -1,5 +1,17 @@
 ﻿[
   {
+    "names": "Văn",
+    "chance": "5"
+  },
+  {
+    "names": "Thị",
+    "chance": "5"
+  },
+  {
+    "names": "Ái,An,Ân,Anh,Ánh",
+    "chance": "1"
+  },
+  {
     "names": "Ái,An,Ân,Anh,Ánh",
     "chance": "1"
   },
@@ -60,7 +72,7 @@
     "chance": "1"
   },
   {
-    "names": "Vân,Văn,Vạn,Vàng,Viễn,Viết,Việt,Vinh,Vĩnh,Vũ,Vương,Vy",
+    "names": "Vân,Vạn,Vàng,Viễn,Viết,Việt,Vinh,Vĩnh,Vũ,Vương,Vy",
     "chance": "1"
   },
   {

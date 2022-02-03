@@ -8,15 +8,25 @@ public class RandomService : IRandomService
 {
 	private readonly IArrayService _arrayService;
 	private readonly IDataService _dataService;
+
 	public RandomService(IArrayService arrayService, IDataService dataService)
 	{
 		_arrayService = arrayService;
 		_dataService = dataService;
 	}
+
 	public T RandomItem<T>(T[] items)
 	{
-		var rnd = RandomNumberGenerator.GetInt32(0, items.Length);
-		return items[rnd];
+		if (items.Length == 1) return items[0];
+		var index = RandomNumberGenerator.GetInt32(0, items.Length);
+		return items[index];
+	}
+
+	public char RandomItem(string str)
+	{
+		if (str.Length == 1) return str[0];
+		var index = RandomNumberGenerator.GetInt32(0, str.Length);
+		return str[index];
 	}
 
 	public T RandomItem<T>(T[] items, int lower, int upper)
@@ -63,7 +73,7 @@ public class RandomService : IRandomService
 	public int[] RandomAge(int lower, int upper, int quantity)
 	{
 		if (lower < 0) lower = 0;
-		if (upper >= 100) upper = 99;
+		if (upper > 99) upper = 99;
 		if (lower > upper) return Array.Empty<int>();
 
 		var ageRatio = _dataService.GetAgeRatio();
@@ -130,19 +140,66 @@ public class RandomService : IRandomService
 		var middlenameIndexes = _dataService.GetMiddlenameIndexes();
 		var surnamesIndexes = _dataService.GetSurnameIndexes();
 
+		// length 3 (0, 1): 50 + 10, length 4 (2, 3): 15 + 15, length 5 (4, 5): 5 + 5
+		var lengthIndexes = _arrayService.IndexesByRatio(100, "50,10,15,15,5,5");
+
 		var output = new string[quantity];
 		for (var i = 0; i < quantity; i++)
 		{
-			var firstName = RandomItem(firstnames, firstnameIndexes);
-			var middleName = RandomItem(middlenames, middlenameIndexes);
+			var firstName1 = RandomItem(firstnames, firstnameIndexes);
+			var firstName2 = RandomItem(firstnames, firstnameIndexes);
+			var middleName1 = RandomItem(middlenames, middlenameIndexes);
+			var middleName2 = RandomItem(middlenames, middlenameIndexes);
+			var middleName3 = RandomItem(middlenames, middlenameIndexes);
 			var surName = RandomItem(surnames, surnamesIndexes);
 
-			var first = RandomItem(firstName.NamesArr);
-			var middle = RandomItem(middleName.NamesArr);
+			var first1 = RandomItem(firstName1.NamesArr);
+			var first2 = RandomItem(firstName2.NamesArr);
+			var middle1 = RandomItem(middleName1.NamesArr);
+			var middle2 = RandomItem(middleName2.NamesArr);
+			var middle3 = RandomItem(middleName3.NamesArr);
 			var sur = RandomItem(surName.NamesArr);
 
-			var name = $"{sur} {middle} {first}";
-			output[i] = name;
+			var rndLength = RandomItem(lengthIndexes);
+			switch (rndLength)
+			{
+				case 1: // length 3
+					{
+						var name = $"{middle1} {middle2} {first1}";
+						output[i] = name;
+						break;
+					}
+				case 2: // length 4
+					{
+						var name = $"{sur} {middle1} {middle2} {first1}";
+						output[i] = name;
+						break;
+					}
+				case 3: // length 4
+					{
+						var name = $"{sur} {middle1} {first1} {first2}";
+						output[i] = name;
+						break;
+					}
+				case 4: // length 5
+					{
+						var name = $"{sur} {middle1} {middle2} {middle3} {first1}";
+						output[i] = name;
+						break;
+					}
+				case 5: // length 5
+					{
+						var name = $"{sur} {middle1} {middle2} {first1} {first2}";
+						output[i] = name;
+						break;
+					}
+				default: // case 0: length 3
+					{
+						var name = $"{sur} {middle1} {first1}";
+						output[i] = name;
+						break;
+					}
+			}
 		}
 
 		return output;
@@ -150,7 +207,24 @@ public class RandomService : IRandomService
 
 	public string[] RandomPassword(int length, int quantity)
 	{
-		return new string[] { };
+		if (length < 6) length = 6;
+		var passwordset = _dataService.GetPasswordsets();
+		var indexes = _dataService.GetPasswordsetsIndexes();
+
+		var output = new string[quantity];
+		for (var i = 0; i < quantity; i++)
+		{
+			var onepassword = new char[length];
+			for (var j = 0; j < length; j++)
+			{
+				var rndSet = RandomItem(passwordset, indexes);
+				var rndChar = RandomItem(rndSet.Characters);
+				onepassword[j] = rndChar;
+			}
+			output[i] = new string(onepassword);
+		}
+
+		return output;
 	}
 
 	public int[] RandomZipcode(int quantity)

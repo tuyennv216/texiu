@@ -24,4 +24,7 @@ public interface IDataService
 
 	public Wordset GetWordset();
 
+	public Passwordset[] GetPasswordsets();
+	public int[] GetPasswordsetsIndexes();
+
 }

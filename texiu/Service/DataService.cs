@@ -33,6 +33,10 @@ public class DataService : IDataService
 
 	private readonly Wordset _wordset;
 
+	private readonly Passwordset[] _passwordsets;
+	private readonly float[] _passwordsetsChances;
+	private int[] _passwordsetsChancesIndexes;
+
 	// update reference data each hour
 	private DateTime _lastUpdateTime = DateTime.Now;
 	private readonly TimeSpan _updateTimespan = TimeSpan.FromHours(1);
@@ -77,18 +81,24 @@ public class DataService : IDataService
 		// Load sur name
 		string surnameFile = File.ReadAllText(@"Data/sur-name.json");
 		_surnames = JsonConvert.DeserializeObject<Surname[]>(surnameFile) ?? Array.Empty<Surname>();
-		_surnamesChances = _middlenames.Select(x => x.Chance).ToArray();
+		_surnamesChances = _surnames.Select(x => x.Chance).ToArray();
 		_surnamesChancesIndexes = _arrayService.IndexesByRatio(100, string.Join(',', _surnamesChances));
 
-		// Load zipcodes
-		string zipcodesFile = File.ReadAllText(@"Data/zipcode.json");
-		_zipcodes = JsonConvert.DeserializeObject<Zipcode[]>(zipcodesFile) ?? Array.Empty<Zipcode>();
-		_zipcodesChances = _middlenames.Select(x => x.Chance).ToArray();
+		// Load zipcode
+		string zipcodeFile = File.ReadAllText(@"Data/zipcode.json");
+		_zipcodes = JsonConvert.DeserializeObject<Zipcode[]>(zipcodeFile) ?? Array.Empty<Zipcode>();
+		_zipcodesChances = _zipcodes.Select(x => x.Chance).ToArray();
 		_zipcodesChancesIndexes = _arrayService.IndexesByRatio(100, string.Join(',', _zipcodesChances));
 
 		// Load wordset
-		string wordsetFile = File.ReadAllText(@"Data/wordset.json");
+		string wordsetFile = File.ReadAllText(@"Data/word-set.json");
 		_wordset = JsonConvert.DeserializeObject<Wordset>(wordsetFile) ?? new Wordset();
+
+		// Load passwordset
+		string passwordsetFile = File.ReadAllText(@"Data/password-set.json");
+		_passwordsets = JsonConvert.DeserializeObject<Passwordset[]>(passwordsetFile) ?? Array.Empty<Passwordset>();
+		_passwordsetsChances = _passwordsets.Select(x => x.Chance).ToArray();
+		_passwordsetsChancesIndexes = _arrayService.IndexesByRatio(100, string.Join(',', _passwordsetsChances));
 
 	}
 
@@ -180,7 +190,7 @@ public class DataService : IDataService
 	}
 	#endregion
 
-	#region post code
+	#region zip code
 	public Zipcode[] GetZipcodes()
 	{
 		return _zipcodes;
@@ -203,6 +213,25 @@ public class DataService : IDataService
 	public Wordset GetWordset()
 	{
 		return _wordset;
+	}
+	#endregion
+
+	#region password set
+	public Passwordset[] GetPasswordsets()
+	{
+		return _passwordsets;
+	}
+
+	public int[] GetPasswordsetsIndexes()
+	{
+		var now = DateTime.Now;
+		if (now - _lastUpdateTime > _updateTimespan)
+		{
+			_lastUpdateTime = now;
+			_passwordsetsChancesIndexes = _arrayService.IndexesByRatio(100, string.Join(',', _passwordsetsChances));
+		}
+
+		return _passwordsetsChancesIndexes;
 	}
 	#endregion
 }
