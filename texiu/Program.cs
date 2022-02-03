@@ -39,7 +39,4 @@ if (app.Environment.IsDevelopment())
 
 app.MapControllers();
 
-var wellcome = app.Configuration["wellcome"] ?? "Hello! Server is running.";
-app.MapGet("/", () => wellcome);
-
 app.Run();

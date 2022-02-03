@@ -11,7 +11,7 @@
 #### - List images  
 `microk8s ctr images ls "name~=texiu"`
 
-## Deploy on server
+## Deploy app
 #### - Edit the external ip with the vps public ip in the deployment file 'texiu-k8s.yaml'
 ```
   externalIPs:
